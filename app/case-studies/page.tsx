@@ -17,7 +17,7 @@ export default async function CaseStudiesPage() {
         <div className="container">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Work
+              Our Happy Customers
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
               Case studies showcasing our expertise in React Native development, technical strategy, and innovative solutions that drive business results.
