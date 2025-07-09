@@ -1,6 +1,9 @@
-import { getServices } from '@/lib/cosmic'
+import { getServices, REVALIDATE_TIME } from '@/lib/cosmic'
 import ServiceGrid from '@/components/ServiceGrid'
 import { Metadata } from 'next'
+
+// Add revalidation for fresh content every 10 seconds
+export const revalidate = REVALIDATE_TIME
 
 export const metadata: Metadata = {
   title: 'Our Services - Morrow Digital',

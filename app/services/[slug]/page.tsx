@@ -1,8 +1,11 @@
 // app/services/[slug]/page.tsx
-import { getService, getServices } from '@/lib/cosmic'
+import { getService, getServices, REVALIDATE_TIME } from '@/lib/cosmic'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import CallToAction from '@/components/CallToAction'
+
+// Add revalidation for fresh content every 10 seconds
+export const revalidate = REVALIDATE_TIME
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>

@@ -1,8 +1,11 @@
 // app/blog/[slug]/page.tsx
-import { getBlogPost, getBlogPosts } from '@/lib/cosmic'
+import { getBlogPost, getBlogPosts, REVALIDATE_TIME } from '@/lib/cosmic'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Link from 'next/link'
+
+// Add revalidation for fresh content every 10 seconds
+export const revalidate = REVALIDATE_TIME
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
