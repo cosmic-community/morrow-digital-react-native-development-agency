@@ -18,9 +18,6 @@ export const cosmic = createBucketClient({
   apiEnvironment: 'staging',
 })
 
-// Cache revalidation time in seconds
-export const REVALIDATE_TIME = 10
-
 // Error helper for Cosmic SDK
 function hasStatus(error: unknown): error is { status: number } {
   return typeof error === 'object' && error !== null && 'status' in error;

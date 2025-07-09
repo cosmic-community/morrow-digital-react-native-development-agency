@@ -1,9 +1,9 @@
-import { getBlogPosts, REVALIDATE_TIME } from '@/lib/cosmic'
+import { getBlogPosts } from '@/lib/cosmic'
 import BlogGrid from '@/components/BlogGrid'
 import { Metadata } from 'next'
 
 // Add revalidation for fresh content every 10 seconds
-export const revalidate = REVALIDATE_TIME
+export const revalidate = 10
 
 export const metadata: Metadata = {
   title: 'Blog - Morrow Digital',

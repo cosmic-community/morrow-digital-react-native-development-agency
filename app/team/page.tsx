@@ -1,9 +1,9 @@
-import { getTeamMembers, REVALIDATE_TIME } from '@/lib/cosmic'
+import { getTeamMembers } from '@/lib/cosmic'
 import TeamGrid from '@/components/TeamGrid'
 import { Metadata } from 'next'
 
 // Add revalidation for fresh content every 10 seconds
-export const revalidate = REVALIDATE_TIME
+export const revalidate = 10
 
 export const metadata: Metadata = {
   title: 'Our Team - Morrow Digital',

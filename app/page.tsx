@@ -1,4 +1,4 @@
-import { getHomepage, getFeaturedServices, getFeaturedCaseStudies, REVALIDATE_TIME } from '@/lib/cosmic'
+import { getHomepage, getFeaturedServices, getFeaturedCaseStudies } from '@/lib/cosmic'
 import HeroSection from '@/components/HeroSection'
 import ServiceGrid from '@/components/ServiceGrid'
 import CaseStudyGrid from '@/components/CaseStudyGrid'
@@ -6,7 +6,7 @@ import CallToAction from '@/components/CallToAction'
 import { Metadata } from 'next'
 
 // Add revalidation for fresh content every 10 seconds
-export const revalidate = REVALIDATE_TIME
+export const revalidate = 10
 
 export async function generateMetadata(): Promise<Metadata> {
   const homepage = await getHomepage()

@@ -1,11 +1,11 @@
 // app/case-studies/[slug]/page.tsx
-import { getCaseStudy, getCaseStudies, REVALIDATE_TIME } from '@/lib/cosmic'
+import { getCaseStudy, getCaseStudies } from '@/lib/cosmic'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import CallToAction from '@/components/CallToAction'
 
 // Add revalidation for fresh content every 10 seconds
-export const revalidate = REVALIDATE_TIME
+export const revalidate = 10
 
 interface CaseStudyPageProps {
   params: Promise<{ slug: string }>
