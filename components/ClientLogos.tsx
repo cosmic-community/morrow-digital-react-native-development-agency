@@ -61,30 +61,6 @@ export default function ClientLogos({ className = '' }: ClientLogosProps) {
     }
   ]
 
-  useEffect(() => {
-    const scrollContainer = scrollRef.current
-    if (!scrollContainer) return
-
-    let animationFrame: number
-    let scrollPosition = 0
-    const scrollSpeed = 0.5
-
-    const animate = () => {
-      scrollPosition += scrollSpeed
-      if (scrollPosition >= scrollContainer.scrollWidth / 2) {
-        scrollPosition = 0
-      }
-      scrollContainer.scrollLeft = scrollPosition
-      animationFrame = requestAnimationFrame(animate)
-    }
-
-    animationFrame = requestAnimationFrame(animate)
-
-    return () => {
-      cancelAnimationFrame(animationFrame)
-    }
-  }, [])
-
   return (
     <section className={`py-12 bg-white border-b border-gray-100 ${className}`}>
       <div className="container">
@@ -98,14 +74,7 @@ export default function ClientLogos({ className = '' }: ClientLogosProps) {
         </div>
         
         <div className="relative overflow-hidden">
-          <div 
-            ref={scrollRef}
-            className="flex gap-12 overflow-x-hidden"
-            style={{
-              width: 'fit-content',
-              animation: 'none' // We'll handle animation with JavaScript for better control
-            }}
-          >
+          <div className="flex gap-12 animate-scroll">
             {/* First set of logos */}
             {clientLogos.map((client, index) => (
               <div
