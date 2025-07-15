@@ -56,7 +56,7 @@ export default function HeroSection({
           <div className="bg-secondary flex items-center justify-center relative">
             <div className="relative">
               <img
-                src="/hero-phones.png"
+                src="https://imgix.cosmicjs.com/3f6403c0-6181-11f0-a051-23c10f41277a-633ecb4499310b1d0f361c00_62978564fd9486f2a1cc6315_home-header.webp?w=1000&h=1200&fit=crop&auto=format,compress"
                 alt="Mobile app interfaces"
                 width={500}
                 height={600}
