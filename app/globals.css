@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --primary: 111 66 193;
-    --primary-dark: 90 45 145;
-    --primary-light: 139 92 246;
+    --primary: 59 34 168;
+    --primary-dark: 46 26 133;
+    --primary-light: 76 47 207;
     --secondary: 248 249 250;
     --accent: 255 215 0;
   }
