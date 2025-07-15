@@ -8,13 +8,13 @@ export default function HeroSection({
   showCTA = false 
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
       {/* Two-column layout */}
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
           {/* Left side - Text content with solid color background */}
           <div className="bg-primary flex items-center text-white relative z-10">
-            <div className="container mx-auto px-8 py-16">
+            <div className="container mx-auto px-8 py-24">
               <div className="space-y-8 max-w-lg">
                 <div className="space-y-2">
                   <h2 className="text-accent text-lg font-semibold">
