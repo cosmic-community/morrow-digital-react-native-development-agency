@@ -1,5 +1,6 @@
 import { getHomepage, getFeaturedServices, getFeaturedCaseStudies } from '@/lib/cosmic'
 import HeroSection from '@/components/HeroSection'
+import ClientLogos from '@/components/ClientLogos'
 import ServiceGrid from '@/components/ServiceGrid'
 import CaseStudyGrid from '@/components/CaseStudyGrid'
 import CallToAction from '@/components/CallToAction'
@@ -52,6 +53,9 @@ export default async function HomePage() {
         backgroundImage={homepage.metadata.hero_image?.imgix_url}
         showCTA={true}
       />
+
+      {/* Client Logos Section */}
+      <ClientLogos />
 
       {/* Services Section */}
       <section className="section-padding bg-gray-50">
